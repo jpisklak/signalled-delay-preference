@@ -1,0 +1,74 @@
+=== Individual Birds ===
+# A tibble: 12 × 6
+# Groups:   subject, condition [12]
+   subject condition order      tot_sig_resp tot_resp    cp
+   <fct>   <chr>     <fct>             <dbl>    <dbl> <dbl>
+ 1 13      Long      Long-Short           59       60 0.98 
+ 2 13      Short     Long-Short            1       60 0.017
+ 3 100     Long      Short-Long           60       60 1    
+ 4 100     Short     Short-Long           44       60 0.73 
+ 5 822     Long      Long-Short           43       47 0.91 
+ 6 822     Short     Long-Short           57       60 0.95 
+ 7 1269    Long      Long-Short           60       60 1    
+ 8 1269    Short     Long-Short           48       60 0.8  
+ 9 6159    Long      Short-Long           60       60 1    
+10 6159    Short     Short-Long           23       60 0.38 
+11 6163    Long      Short-Long           51       60 0.85 
+12 6163    Short     Short-Long           43       60 0.72 
+
+
+=== Condition x Order ===
+# A tibble: 4 × 5
+# Groups:   condition [2]
+  condition order          n     m     s
+  <chr>     <fct>      <int> <dbl> <dbl>
+1 Long      Long-Short     3  0.97 0.045
+2 Long      Short-Long     3  0.95 0.087
+3 Short     Long-Short     3  0.59 0.50 
+4 Short     Short-Long     3  0.61 0.20 
+
+
+=== Condition Only ===
+# A tibble: 2 × 4
+  condition     n     m     s
+  <chr>     <int> <dbl> <dbl>
+1 Long          6  0.96 0.062
+2 Short         6  0.6  0.34 
+
+
+=== Test ===
+
+	One Sample t-test
+
+data:  diff_scores_arc
+t = 2.7095, df = 5, p-value = 0.0423
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+ 0.02831282 1.07648547
+sample estimates:
+mean of x 
+0.5523991 
+
+
+
+=== Effect Size ===
+
+Hedges's g
+
+g estimate: 1.470527 (large)
+95 percent confidence interval:
+     lower      upper 
+-0.2740625  3.2151175 
+
+
+
+=== Bayes Factor ===
+Bayes factor analysis
+--------------
+[1] Alt., r=0.707 : 2.359802 ±0%
+
+Against denominator:
+  Null, mu = 0 
+---
+Bayes factor type: BFoneSample, JZS
+

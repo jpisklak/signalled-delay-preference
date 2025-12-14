@@ -1,0 +1,15 @@
+=== Condition x IL ===
+# A tibble: 4 × 6
+# Groups:   condition [2]
+  condition il_fun          n     G m_trim s_win
+  <chr>     <chr>       <int> <dbl>  <dbl> <dbl>
+1 Long      Signalled       6   0.2    84.   31.
+2 Long      Unsignalled     6   0.2   588.  136.
+3 Short     Signalled       6   0.2   120.   53.
+4 Short     Unsignalled     6   0.2   163.   79.
+
+
+=== Trimmed T-test ===
+Test-Stat = 5.15
+df = 3
+p = 0.014
